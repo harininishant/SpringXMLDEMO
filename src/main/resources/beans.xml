@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+</beans>
+            <bean name ="electricEngine" class ="io.pragra.learning.demo.ElectricEngine"></bean>
+            <bean name ="gasolineEngine" class = "io.pragra.learning.demo.GasolineEngine"></bean>
+            <bean name ="car" class="io.pragra.learning.demo.Car">
+                <constructor-arg name = "engine" ref="disielEngine"></constructor-arg>
+           </bean>
+    <bean name="Course" class="io.pragra.learning.demo.Course">
+        <property name="courseId" value="1"></property>
+        <property name="courseName" value="Java Fullstack"></property>
+    </bean>
+    <bean name ="student" class="io.pragra.learning.demo.Student">
+        <constructor-arg name="studentId" value="20"></constructor-arg>
+        <constructor-arg name="name" value="harini"></constructor-arg>
+        <constructor-arg name ="course" ref="course"></constructor-arg>
+    </bean>
+
+ </beans>
